@@ -27,7 +27,17 @@ client.on('message', message =>{
 
     if(command === 'sendamessage'){
         client.commands.get('sendamessage').execute(message, args);
-    } 
+    } else if (command === 'summon')
+    {
+        client.commands.get('summon').execute(message, args);
+        if (message.member.voice.channel) {
+            const connection = await message.member.voice.channel.join();
+          } else {
+            message.reply('You need to join a voice channel first!');
+          }
+    }
 });
+
+
 
 client.login(process.env.token);
