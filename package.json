@@ -1,0 +1,14 @@
+{
+  "name": "bowlcutbot",
+  "version": "1.0.0",
+  "description": "A personal bot made for Marcus Veltri's Discord server.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wade Smith",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
+}
