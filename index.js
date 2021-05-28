@@ -4,6 +4,8 @@ const client = new Discord.Client();
 const prefix = 'tsfh!';
 
 const fs = require('fs');
+const ytdl = require('ytdl-core');
+
 
 client.commands = new Discord.Collection();
 
@@ -28,6 +30,7 @@ client.on('message', async message => {
       // Only try to join the sender's voice channel if they are in one themselves
       if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
+        connection.play(ytdl('https://www.youtube.com/watch?v=AfMV4ZC4AnA', { quality: 'highestaudio' }));
       } else {
         message.reply('You need to join a voice channel first!');
       }
