@@ -1,10 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const ytdl = require('ytdl-core');
 
 const prefix = 'tsfh!';
 
 const fs = require('fs');
-const ytdl = require('ytdl-core');
+
 
 
 client.commands = new Discord.Collection();
